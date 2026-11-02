@@ -37,7 +37,7 @@ CLASSIFICATION_MODELS = {
     "Random Forest": RandomForestClassifier(n_estimators=200, random_state=42),
     "Gradient Boosting": GradientBoostingClassifier(random_state=42),
     "Decision Tree": DecisionTreeClassifier(random_state=42),
-    "SVM": SVC(probability=True, random_state=42),
+    "SVM": SVC(random_state=42),
 }
 
 REGRESSION_MODELS = {

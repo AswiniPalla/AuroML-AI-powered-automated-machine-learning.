@@ -43,6 +43,12 @@ streamlit run app.py
 
 The app will open at `http://localhost:8501`.
 
+## Deploy on Streamlit Community Cloud
+1. Make sure the app files and `requirements.txt` are pushed to the GitHub `main` branch.
+2. Sign in at [share.streamlit.io](https://share.streamlit.io/) with GitHub.
+3. Select **Create app**, choose this repository and the `main` branch, and set the app file path to `app.py`.
+4. Select **Deploy**. Streamlit Cloud installs the packages listed in `requirements.txt`.
+
 ## Usage
 1. Upload a CSV file.
 2. Select the target column you want to predict.
@@ -57,7 +63,7 @@ The app will open at `http://localhost:8501`.
 - **Predict on new data**: add a second uploader to score a fresh dataset with the saved model
 - **Persistence/history**: add a database (SQLite/Postgres) to save past runs per user
 - **Production backend**: split into FastAPI backend + React frontend, use Celery/Redis for async training on large datasets
-- **Deployment**: containerize with Docker, deploy to Render, AWS, or Hugging Face Spaces
+- **Other deployment options**: containerize with Docker, or deploy to Render, AWS, or Hugging Face Spaces
 
 ## Notes
 - Designed for small-to-medium tabular datasets. For very large files, add sampling or chunked processing.
